@@ -1,3 +1,33 @@
+<?php require("database_credentials.php");
+    session_start();
+
+    if(isset($_POST["login"])){
+      $uname = $_POST["uname"];
+      $pass = $_POST["psw"];
+
+      $sql = "Select username, pass from person where username='$uname' AND pass='$pass'";
+    
+
+    // Create connection
+        $conn = new mysqli(servername,username,password,dbname);
+
+        // Check connection
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+              }
+
+        $results= $conn->query($sql);
+      //connection is successful if the number of rows in
+      //result is exactly 1.
+          if($results->num_rows==1){
+            $_SESSION["uname"]=$uname;
+            header("location:dashboard.php");
+          }else{
+            echo "<p style='color:red;'>Wrong username or password</p>"; 
+          }
+        }           
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,91 +51,10 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="style2.css" rel="stylesheet">
-   
-    
-    <style type="text/css">
-
-body{
-  background: #DAF1D5;
   
-   
-    margin: 150px;
-    padding:100px; 
-}
-form {
-  border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-</style>
+  <!-- Template Main CSS File -->
+  <link href="css/style2.css" rel="stylesheet">
+  <link  href="css/login.css" rel="stylesheet">
 </head>
 <body>
   <!-- ======= Header ======= -->
@@ -138,33 +87,26 @@ span.psw {
       </div>
 
     </div>
-  </header><!-- End Header -->
-    
-    <form action="action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
-
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+  </header>
+    <form action="" method="post">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <small style="color:red;">
+    </small>
+    <input type="submit" name="login" value="Login"
+    style="
+      width:100%;
+      padding:10px;
+      margin-top:20px;
+      background-color:lightgreen;
+      border:none;
+    "
+    />
   </div>
 </form>
     
 </body>
 </html>
-
-background: url("youfarm.jpg")  center;

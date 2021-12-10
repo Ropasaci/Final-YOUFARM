@@ -23,16 +23,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="style2.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="css/style2.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Lumia - v4.6.0
-  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
+
 
 <body>
 
@@ -41,9 +35,8 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Youfarm</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="youfarmlanding.php">Youfarm</a></h1>
+        
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -76,6 +69,7 @@
       <a href="youfarmregisteringform.php" class="btn btn-outline-success">Get Started</a>
       
     </div>
+   
   </section><!-- End Hero -->
 
   <main id="main">
@@ -226,73 +220,6 @@
       </div>
     </section><!-- End Services Section -->
 
-    
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Sit sint consectetur velit quos quisquam cupiditate nemo qui</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" alt="">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" alt="">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
@@ -373,7 +300,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Lumia</h3>
+            
             <p>
                 194 Baines Avenues Street <br>
               Harare, Hr <br>
@@ -410,18 +337,7 @@
 
     <div class="container d-md-flex py-4">
 
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Lumia</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
+      
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
