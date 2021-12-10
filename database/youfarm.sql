@@ -27,6 +27,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `cart`
 --
 
+DROP DATABASE IF EXISTS youfarm; 
+CREATE DATABASE youfarm; 
+USE youfarm; 
+
 CREATE TABLE `cart` (
   `transactionID` int(11) NOT NULL,
   `InvestmentID` int(11) NOT NULL,
